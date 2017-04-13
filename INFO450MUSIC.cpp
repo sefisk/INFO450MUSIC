@@ -16,7 +16,7 @@ class music
 	char rate[3];
 public:
 	music();
-	void setEntry(char fn[], char ln[], char num[]);
+	void setEntry(char a[], char b[], char c[]);
 	void display();
 	friend class pod;
 };
@@ -105,21 +105,18 @@ int pod::check()
 }
 void pod::show()
 {
-	/////work on this tommorrow 
-	//// only showing 4 instead of 5
-	//because it is incrementing when you do the cin.ignore 
 	int count = 0;
 	for (int i = 0; i < listnum; i++) {
 		if (i % 5 == 0 && i != 0)
 		{
 			cin.ignore();
-			cout << i + 1 << ". ";
+			cout << i + 1 << ". " << endl;
 			ml[i]->display();
 		}
 		else
 		{
-			//clearscreen();
-			cout << i + 1 << ". ";
+			
+			cout << i + 1 << ". " << endl;
 			ml[i]->display();
 
 		}
